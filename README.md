@@ -237,6 +237,10 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 History Log
 =============
 
+- 1.3.0 -- 2019-05-03
+
+    - update service file, now aware of the showJsNuggetHeaders option
+    
 - 1.2.0 -- 2019-05-02
 
     - update service file, now aware of the showCssNuggetHeaders option
