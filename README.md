@@ -91,6 +91,7 @@ kit:
                     constructor_args:
                         options:
                             showCssNuggetHeaders: true
+                            showJsNuggetHeaders: true
                     methods:
                         setWidgetBaseDir:
                             dir: ${app_dir}
