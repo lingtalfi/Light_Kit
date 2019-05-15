@@ -9,6 +9,8 @@ use Ling\Kit\PageRenderer\KitPageRenderer;
 use Ling\Light\ServiceContainer\LightDummyServiceContainer;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 use Ling\Light_Kit\Exception\LightKitException;
+use Ling\Light_Kit\PageConfigurationTransformer\DynamicVariableAwareInterface;
+use Ling\Light_Kit\PageConfigurationTransformer\PageConfigurationTransformerInterface;
 
 
 /**
@@ -43,6 +45,12 @@ class LightKitPageRenderer extends KitPageRenderer
      */
     protected $container;
 
+    /**
+     * This property holds the array of pageConfTransformers for this instance.
+     * @var PageConfigurationTransformerInterface[]
+     */
+    protected $pageConfTransformers;
+
 
     /**
      * Builds the LightKitPageRenderer instance.
@@ -53,6 +61,7 @@ class LightKitPageRenderer extends KitPageRenderer
         $this->applicationDir = null;
         $this->pageName = null;
         $this->container = null;
+        $this->pageConfTransformers = [];
     }
 
     /**
@@ -77,6 +86,16 @@ class LightKitPageRenderer extends KitPageRenderer
         $this->container = $container;
     }
 
+
+    /**
+     * Adds a PageConfigurationTransformerInterface to this instance.
+     *
+     * @param PageConfigurationTransformerInterface $transformer
+     */
+    public function addPageConfigurationTransformer(PageConfigurationTransformerInterface $transformer)
+    {
+        $this->pageConfTransformers[] = $transformer;
+    }
 
     /**
      * Configures thi instance.
@@ -108,10 +127,11 @@ class LightKitPageRenderer extends KitPageRenderer
      *
      *
      * @param string $pageName
+     * @param array $dynamicVariables
      * @return string
      * @throws \Exception
      */
-    public function renderPage(string $pageName): string
+    public function renderPage(string $pageName, array $dynamicVariables = []): string
     {
 
         if (null !== $this->applicationDir) {
@@ -123,6 +143,19 @@ class LightKitPageRenderer extends KitPageRenderer
                 //--------------------------------------------
                 $pageConf = $this->confStorage->getPageConf($pageName);
                 if (false !== $pageConf) {
+
+
+                    //--------------------------------------------
+                    // TRANSFORM PAGE CONF
+                    //--------------------------------------------
+                    foreach ($this->pageConfTransformers as $transformer) {
+                        if ($transformer instanceof DynamicVariableAwareInterface) {
+                            $transformer->setVariables($dynamicVariables);
+                        }
+                        $transformer->transform($pageConf);
+                    }
+
+
                     //--------------------------------------------
                     // CONFIGURATION
                     //--------------------------------------------

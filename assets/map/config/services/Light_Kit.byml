@@ -15,6 +15,11 @@ kit:
 
     methods_collection:
         -
+            method: addPageConfigurationTransformer
+            args:
+                -
+                    instance: Ling\Light_Kit\PageConfigurationTransformer\DynamicVariableTransformer
+        -
             method: registerWidgetHandler
             args:
                 - picasso

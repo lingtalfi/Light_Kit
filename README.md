@@ -238,6 +238,10 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 History Log
 =============
 
+- 1.4.0 -- 2019-05-15
+
+    - added the concept of [dynamic variables](https://github.com/lingtalfi/Light_Kit/tree/master/doc/pages/conception-notes.md#dynamic-variables) for LightKitPageRenderer
+    
 - 1.3.0 -- 2019-05-03
 
     - update service file, now aware of the showJsNuggetHeaders option
