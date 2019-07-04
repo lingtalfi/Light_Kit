@@ -238,6 +238,10 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 History Log
 =============
 
+- 1.5.1 -- 2019-07-04
+
+    - fix LazyReferenceResolver having az references (forgot to remove them)
+    
 - 1.5.0 -- 2019-07-04
 
     - added LazyReferenceResolver

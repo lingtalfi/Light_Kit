@@ -5,7 +5,6 @@ namespace Ling\Light_Kit\PageConfigurationTransformer;
 
 
 use Ling\Bat\BDotTool;
-use Ling\Light_Kit\Exception\LightKitException;
 
 /**
  * The LazyReferenceResolver class.
@@ -97,29 +96,11 @@ class LazyReferenceResolver implements PageConfigurationTransformerInterface
                             $token = $match[1];
                             $whatever = $match[2];
 
-
-
-                        if (array_key_exists($token, $this->resolvers)) {
-                            $resolver = $this->resolvers[$token];
-                            $replace = call_user_func($resolver, $whatever);
-
-                            az($replace);
-
-
-                            $variable = $match[0];
-                            if ($variable === $v) {
-                                // standalone mode, we can replace with anything
+                            if (array_key_exists($token, $this->resolvers)) {
+                                $resolver = $this->resolvers[$token];
+                                $replace = call_user_func($resolver, $whatever);
                                 BDotTool::setDotValue($dotPath, $replace, $array);
-                            } else {
-                                // inline mode, only string and number will render correctly
-                                if (is_string($replace) || is_int($replace) || is_float($replace)) {
-                                    $v = str_replace($this->firstSymbol . $this->openingBracket . $varName . $this->closingBracket, $replace, $v);
-                                } else {
-                                    $type = gettype($replace);
-                                    throw new ArrayVariableResolverException("The variable \"$varName\" at \"$dotPath\" is inline, and therefore should only be replaced by a string, an int or a float; $type given.");
-                                }
                             }
-                        }
                         }
                     }
                 }
