@@ -155,7 +155,6 @@ class LightKitPageRenderer extends KitPageRenderer
                         $transformer->transform($pageConf);
                     }
 
-
                     //--------------------------------------------
                     // CONFIGURATION
                     //--------------------------------------------

@@ -87,7 +87,7 @@ class LazyReferenceResolver implements PageConfigurationTransformerInterface
             // example: (::METHOD_CALL::)whatever
             $regex = '!\(::([^:]*)::\)(.*)!';
 
-            BDotTool::walk($pageConfiguration, function (&$v, $key, $dotPath) use (&$array, $regex) {
+            BDotTool::walk($pageConfiguration, function (&$v, $key, $dotPath) use (&$pageConfiguration, $regex) {
 
                 if (is_string($v)) {
                     if (0 === strpos($v, '(::')) {
@@ -99,7 +99,7 @@ class LazyReferenceResolver implements PageConfigurationTransformerInterface
                             if (array_key_exists($token, $this->resolvers)) {
                                 $resolver = $this->resolvers[$token];
                                 $replace = call_user_func($resolver, $whatever);
-                                BDotTool::setDotValue($dotPath, $replace, $array);
+                                BDotTool::setDotValue($dotPath, $replace, $pageConfiguration);
                             }
                         }
                     }
