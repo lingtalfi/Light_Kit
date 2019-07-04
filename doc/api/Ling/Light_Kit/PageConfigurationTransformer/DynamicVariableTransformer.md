@@ -4,7 +4,7 @@
 
 The DynamicVariableTransformer class
 ================
-2019-04-25 --> 2019-05-15
+2019-04-25 --> 2019-07-04
 
 
 
@@ -100,4 +100,4 @@ Ling\Light_Kit\PageConfigurationTransformer\DynamicVariableTransformer
 
 SeeAlso
 ==============
-Previous class: [DynamicVariableAwareInterface](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/DynamicVariableAwareInterface.md)<br>Next class: [PageConfigurationTransformerInterface](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/PageConfigurationTransformerInterface.md)<br>
+Previous class: [DynamicVariableAwareInterface](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/DynamicVariableAwareInterface.md)<br>Next class: [MethodCallResolver](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/LazyReferenceResolver/MethodCallResolver.md)<br>

@@ -4,7 +4,7 @@
 
 The LightKitPageRenderer class
 ================
-2019-04-25 --> 2019-05-15
+2019-04-25 --> 2019-07-04
 
 
 
@@ -22,7 +22,7 @@ Class synopsis
 ==============
 
 
-class <span class="pl-k">LightKitPageRenderer</span> extends [KitPageRenderer](https://github.com/lingtalfi/Kit/blob/master/doc/api/Ling/Kit/PageRenderer/KitPageRenderer.md)  {
+class <span class="pl-k">LightKitPageRenderer</span> extends [KitPageRenderer](https://github.com/lingtalfi/Kit/blob/master/doc/api/Ling/Kit/PageRenderer/KitPageRenderer.md) implements KitPageRendererInterface {
 
 - Properties
     - protected string [$applicationDir](#property-applicationDir) ;
@@ -60,6 +60,7 @@ class <span class="pl-k">LightKitPageRenderer</span> extends [KitPageRenderer](h
     - public KitPageRenderer::printPage() : void
     - public KitPageRenderer::printZone(string $zoneName) : void
     - protected KitPageRenderer::captureZones() : void
+    - protected KitPageRenderer::captureZone(string $zoneName, array $widgets) : void
 
 }
 
@@ -196,6 +197,7 @@ Methods
 - KitPageRenderer::printPage &ndash; Prints the page.
 - KitPageRenderer::printZone &ndash; Prints a zone.
 - KitPageRenderer::captureZones &ndash; Captures the zones defined in the configuration and stores them temporarily.
+- KitPageRenderer::captureZone &ndash; The working horse method behind captureZones.
 
 
 

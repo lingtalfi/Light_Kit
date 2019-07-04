@@ -238,6 +238,10 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 History Log
 =============
 
+- 1.5.0 -- 2019-07-04
+
+    - added LazyReferenceResolver
+    
 - 1.4.0 -- 2019-05-15
 
     - added the concept of [dynamic variables](https://github.com/lingtalfi/Light_Kit/tree/master/doc/pages/conception-notes.md#dynamic-variables) for LightKitPageRenderer

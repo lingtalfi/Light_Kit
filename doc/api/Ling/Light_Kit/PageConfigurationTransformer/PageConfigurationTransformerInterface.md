@@ -4,7 +4,7 @@
 
 The PageConfigurationTransformerInterface class
 ================
-2019-04-25 --> 2019-05-15
+2019-04-25 --> 2019-07-04
 
 
 
@@ -50,4 +50,4 @@ Ling\Light_Kit\PageConfigurationTransformer\PageConfigurationTransformerInterfac
 
 SeeAlso
 ==============
-Previous class: [DynamicVariableTransformer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/DynamicVariableTransformer.md)<br>Next class: [LightKitPageRenderer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageRenderer/LightKitPageRenderer.md)<br>
+Previous class: [LazyReferenceResolver](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/LazyReferenceResolver.md)<br>Next class: [LightKitPageRenderer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageRenderer/LightKitPageRenderer.md)<br>
