@@ -11,7 +11,7 @@ use Ling\Bat\ClassTool;
 class MethodCallResolver
 {
     /**
-     * Interprets the given $expr and return the result.
+     * Interprets the given $expr and returns the result.
      *
      * The given $expr should have one of the following format:
      *

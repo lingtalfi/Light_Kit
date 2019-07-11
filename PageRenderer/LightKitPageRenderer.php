@@ -7,6 +7,7 @@ namespace Ling\Light_Kit\PageRenderer;
 use Ling\Kit\ConfStorage\ConfStorageInterface;
 use Ling\Kit\PageRenderer\KitPageRenderer;
 use Ling\Light\ServiceContainer\LightDummyServiceContainer;
+use Ling\Light\ServiceContainer\LightServiceContainerAwareInterface;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 use Ling\Light_Kit\Exception\LightKitException;
 use Ling\Light_Kit\PageConfigurationTransformer\DynamicVariableAwareInterface;
@@ -149,6 +150,10 @@ class LightKitPageRenderer extends KitPageRenderer
                     // TRANSFORM PAGE CONF
                     //--------------------------------------------
                     foreach ($this->pageConfTransformers as $transformer) {
+                        if ($transformer instanceof LightServiceContainerAwareInterface) {
+                            $transformer->setContainer($this->getContainer());
+                        }
+
                         if ($transformer instanceof DynamicVariableAwareInterface) {
                             $transformer->setVariables($dynamicVariables);
                         }
@@ -188,7 +193,7 @@ class LightKitPageRenderer extends KitPageRenderer
      *
      * @return LightServiceContainerInterface
      */
-    protected function getContainer(): LightServiceContainerInterface
+    public function getContainer(): LightServiceContainerInterface
     {
         if (null === $this->container) {
             $this->container = new LightDummyServiceContainer();

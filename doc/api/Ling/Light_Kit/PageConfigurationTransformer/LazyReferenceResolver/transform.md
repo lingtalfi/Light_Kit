@@ -7,7 +7,7 @@ LazyReferenceResolver::transform
 
 
 
-LazyReferenceResolver::transform — 
+LazyReferenceResolver::transform — Transforms the given pageConfiguration using the registered resolvers.
 
 
 
@@ -21,7 +21,7 @@ public [LazyReferenceResolver::transform](https://github.com/lingtalfi/Light_Kit
 
 
 
-
+Transforms the given pageConfiguration using the registered resolvers.
 
 
 
@@ -29,6 +29,10 @@ public [LazyReferenceResolver::transform](https://github.com/lingtalfi/Light_Kit
 Parameters
 ================
 
+
+- pageConfiguration
+
+    
 
 
 Return values

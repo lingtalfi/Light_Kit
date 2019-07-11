@@ -5,11 +5,13 @@ namespace Ling\Light_Kit\PageConfigurationTransformer;
 
 
 use Ling\Bat\BDotTool;
+use Ling\Light\ServiceContainer\LightServiceContainerAwareInterface;
+use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 
 /**
  * The LazyReferenceResolver class.
  */
-class LazyReferenceResolver implements PageConfigurationTransformerInterface
+class LazyReferenceResolver implements PageConfigurationTransformerInterface, LightServiceContainerAwareInterface
 {
 
     /**
@@ -28,6 +30,12 @@ class LazyReferenceResolver implements PageConfigurationTransformerInterface
      */
     protected $strictMode;
 
+    /**
+     * This property holds the container for this instance.
+     * @var LightServiceContainerInterface
+     */
+    protected $container;
+
 
     /**
      * Builds the LazyReferenceResolver instance.
@@ -36,7 +44,18 @@ class LazyReferenceResolver implements PageConfigurationTransformerInterface
     {
         $this->resolvers = [];
         $this->strictMode = false;
+        $this->container = null;
     }
+
+
+    /**
+     * @implementation
+     */
+    public function setContainer(LightServiceContainerInterface $container)
+    {
+        $this->container = $container;
+    }
+
 
     /**
      * Sets the strictMde.
@@ -77,6 +96,11 @@ class LazyReferenceResolver implements PageConfigurationTransformerInterface
     //--------------------------------------------
     //
     //--------------------------------------------
+    /**
+     * Transforms the given pageConfiguration using the registered resolvers.
+     *
+     * @param array $pageConfiguration
+     */
     public function transform(array &$pageConfiguration)
     {
 
@@ -98,7 +122,7 @@ class LazyReferenceResolver implements PageConfigurationTransformerInterface
 
                             if (array_key_exists($token, $this->resolvers)) {
                                 $resolver = $this->resolvers[$token];
-                                $replace = call_user_func($resolver, $whatever);
+                                $replace = call_user_func($resolver, $whatever, $this->container);
                                 BDotTool::setDotValue($dotPath, $replace, $pageConfiguration);
                             }
                         }

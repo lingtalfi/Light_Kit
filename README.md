@@ -238,6 +238,11 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 History Log
 =============
 
+- 1.6.0 -- 2019-07-11
+
+    - LazyReferenceResolver now implements LightServiceContainerAwareInterface
+    - add RouteResolver
+    
 - 1.5.2 -- 2019-07-04
 
     - fix LazyReferenceResolver bad array references

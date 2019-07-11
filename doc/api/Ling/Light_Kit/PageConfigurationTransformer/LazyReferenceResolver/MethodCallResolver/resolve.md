@@ -7,7 +7,7 @@ MethodCallResolver::resolve
 
 
 
-MethodCallResolver::resolve — Interprets the given $expr and return the result.
+MethodCallResolver::resolve — Interprets the given $expr and returns the result.
 
 
 
@@ -21,7 +21,7 @@ public [MethodCallResolver::resolve](https://github.com/lingtalfi/Light_Kit/blob
 
 
 
-Interprets the given $expr and return the result.
+Interprets the given $expr and returns the result.
 
 The given $expr should have one of the following format:
 
