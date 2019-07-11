@@ -46,6 +46,6 @@ class RouteResolver
         if (2 === count($p)) {
             $params = SmartCodeTool::parse($p[1]);
         }
-        return $container->get("router")->getUrl($route, $params);
+        return $container->get("reverse_router")->getUrl($route, $params);
     }
 }

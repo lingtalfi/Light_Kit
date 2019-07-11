@@ -30,6 +30,9 @@ kit:
                                 METHOD_CALL:
                                     instance: Ling\Light_Kit\PageConfigurationTransformer\LazyReferenceResolver\MethodCallResolver
                                     callable_method: resolve
+                                ROUTE:
+                                    instance: Ling\Light_Kit\PageConfigurationTransformer\LazyReferenceResolver\RouteResolver
+                                    callable_method: resolve
 
 
         -

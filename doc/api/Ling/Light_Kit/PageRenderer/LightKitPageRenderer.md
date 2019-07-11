@@ -38,6 +38,7 @@ class <span class="pl-k">LightKitPageRenderer</span> extends [KitPageRenderer](h
     - protected bool [KitPageRenderer::$strictMode](#property-strictMode) ;
     - protected callable [KitPageRenderer::$errorHandler](#property-errorHandler) ;
     - protected array [KitPageRenderer::$zones](#property-zones) ;
+    - protected array [KitPageRenderer::$widgetsCount](#property-widgetsCount) ;
     - protected string [KitPageRenderer::$layoutRootDir](#property-layoutRootDir) ;
     - protected [Ling\Kit\WidgetConfDecorator\WidgetConfDecoratorInterface[]](https://github.com/lingtalfi/Kit/blob/master/doc/api/Ling/Kit/WidgetConfDecorator/WidgetConfDecoratorInterface.md) [KitPageRenderer::$widgetConfDecorators](#property-widgetConfDecorators) ;
 
@@ -51,6 +52,7 @@ class <span class="pl-k">LightKitPageRenderer</span> extends [KitPageRenderer](h
     - public [getContainer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageRenderer/LightKitPageRenderer/getContainer.md)() : [LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md)
 
 - Inherited methods
+    - public KitPageRenderer::countWidgets(string $zoneName) : int
     - public KitPageRenderer::setPageConf(array $pageConf) : void
     - public KitPageRenderer::setStrictMode(bool $strictMode) : [KitPageRenderer](https://github.com/lingtalfi/Kit/blob/master/doc/api/Ling/Kit/PageRenderer/KitPageRenderer.md)
     - public KitPageRenderer::setErrorHandler(callable $errorHandler) : void
@@ -161,6 +163,12 @@ Properties
     
     
 
+- <span id="property-widgetsCount"><b>widgetsCount</b></span>
+
+    This property holds the number of widgets per zone for this instance.
+    
+    
+
 - <span id="property-layoutRootDir"><b>layoutRootDir</b></span>
 
     This property holds the layoutRootDir for this instance.
@@ -188,6 +196,7 @@ Methods
 - [LightKitPageRenderer::configure](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageRenderer/LightKitPageRenderer/configure.md) &ndash; Configures thi instance.
 - [LightKitPageRenderer::renderPage](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageRenderer/LightKitPageRenderer/renderPage.md) &ndash; Renders the given page.
 - [LightKitPageRenderer::getContainer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageRenderer/LightKitPageRenderer/getContainer.md) &ndash; Returns a light service container instance.
+- KitPageRenderer::countWidgets &ndash; Returns the number of widgets for a given zone.
 - KitPageRenderer::setPageConf &ndash; Sets the pageConf.
 - KitPageRenderer::setStrictMode &ndash; Sets the strictMode.
 - KitPageRenderer::setErrorHandler &ndash; Sets the errorHandler.

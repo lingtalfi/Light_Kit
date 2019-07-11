@@ -42,6 +42,7 @@ Table of contents
     - [LightKitPageRenderer::configure](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageRenderer/LightKitPageRenderer/configure.md) &ndash; Configures thi instance.
     - [LightKitPageRenderer::renderPage](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageRenderer/LightKitPageRenderer/renderPage.md) &ndash; Renders the given page.
     - [LightKitPageRenderer::getContainer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageRenderer/LightKitPageRenderer/getContainer.md) &ndash; Returns a light service container instance.
+    - KitPageRenderer::countWidgets &ndash; Returns the number of widgets for a given zone.
     - KitPageRenderer::setPageConf &ndash; Sets the pageConf.
     - KitPageRenderer::setStrictMode &ndash; Sets the strictMode.
     - KitPageRenderer::setErrorHandler &ndash; Sets the errorHandler.
