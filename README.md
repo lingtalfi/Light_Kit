@@ -31,6 +31,7 @@ Summary
 - [How does it work?](#how-does-it-work)
 - [BabyYaml page configuration files](#babyyaml-page-configuration-files)
 - [Calling a page from your Light controller](#calling-a-page-from-your-light-controller)
+- [Conception notes](https://github.com/lingtalfi/Light_Kit/blob/master/doc/pages/conception-notes.md)
 - [History Log](#history-log)
 
 
