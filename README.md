@@ -238,6 +238,10 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 History Log
 =============
 
+- 1.6.2 -- 2019-07-15
+
+    - add documentation for lazy reference resolver
+    
 - 1.6.1 -- 2019-07-11
 
     - fix RouteResolver using inexisting router service
