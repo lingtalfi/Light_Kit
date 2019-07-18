@@ -4,7 +4,7 @@
 
 The LightKitPageRenderer class
 ================
-2019-04-25 --> 2019-07-15
+2019-04-25 --> 2019-07-18
 
 
 
@@ -214,7 +214,9 @@ Methods
 
 Location
 =============
-Ling\Light_Kit\PageRenderer\LightKitPageRenderer
+Ling\Light_Kit\PageRenderer\LightKitPageRenderer<br>
+See the source code of [Ling\Light_Kit\PageRenderer\LightKitPageRenderer](https://github.com/lingtalfi/Light_Kit/blob/master/PageRenderer/LightKitPageRenderer.php)
+
 
 
 SeeAlso

@@ -56,6 +56,11 @@ Exceptions thrown
 
 
 
+Source Code
+===========
+See the source code for method [LightKitPageRenderer::configure](https://github.com/lingtalfi/Light_Kit/blob/master/PageRenderer/LightKitPageRenderer.php#L113-L123)
+
+
 See Also
 ================
 

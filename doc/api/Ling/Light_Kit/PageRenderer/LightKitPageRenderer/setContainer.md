@@ -47,6 +47,11 @@ Returns void.
 
 
 
+Source Code
+===========
+See the source code for method [LightKitPageRenderer::setContainer](https://github.com/lingtalfi/Light_Kit/blob/master/PageRenderer/LightKitPageRenderer.php#L85-L88)
+
+
 See Also
 ================
 

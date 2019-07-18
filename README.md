@@ -239,6 +239,10 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 History Log
 =============
 
+- 1.6.3 -- 2019-07-18
+
+    - update docTools documentation, add links to source code for classes and methods
+    
 - 1.6.2 -- 2019-07-15
 
     - add documentation for lazy reference resolver
