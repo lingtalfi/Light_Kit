@@ -263,6 +263,10 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 History Log
 =============
 
+- 1.7.0 -- 2019-07-25
+
+    - add PageConfUpdator
+    
 - 1.6.4 -- 2019-07-18
 
     - update documentation for multiple plugins writing to the same babyYaml page configuration file

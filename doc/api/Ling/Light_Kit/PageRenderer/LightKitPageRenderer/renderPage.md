@@ -16,7 +16,7 @@ Description
 ================
 
 
-public [LightKitPageRenderer::renderPage](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageRenderer/LightKitPageRenderer/renderPage.md)(string $pageName, array $dynamicVariables = []) : string
+public [LightKitPageRenderer::renderPage](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageRenderer/LightKitPageRenderer/renderPage.md)(string $pageName, array $dynamicVariables = [], [Ling\Light_Kit\PageConfigurationUpdator\PageConfUpdator](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator.md) $pageConfUpdator = null) : string
 
 
 
@@ -35,6 +35,10 @@ Parameters
     
 
 - dynamicVariables
+
+    
+
+- pageConfUpdator
 
     
 
@@ -58,7 +62,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightKitPageRenderer::renderPage](https://github.com/lingtalfi/Light_Kit/blob/master/PageRenderer/LightKitPageRenderer.php#L135-L184)
+See the source code for method [LightKitPageRenderer::renderPage](https://github.com/lingtalfi/Light_Kit/blob/master/PageRenderer/LightKitPageRenderer.php#L137-L194)
 
 
 See Also
