@@ -4,7 +4,7 @@
 
 The PageConfUpdator class
 ================
-2019-04-25 --> 2019-07-25
+2019-04-25 --> 2019-07-26
 
 
 
@@ -31,6 +31,7 @@ class <span class="pl-k">PageConfUpdator</span>  {
     - public [__construct](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator/__construct.md)() : void
     - public static [create](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator/create.md)() : [PageConfUpdator](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator.md)
     - public [update](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator/update.md)(array &$pageConf) : void
+    - public [setMergeArray](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator/setMergeArray.md)(array $mergeArray) : void
 
 }
 
@@ -43,7 +44,7 @@ Properties
 - <span id="property-mergeArray"><b>mergeArray</b></span>
 
     This property holds the mergeArray for this instance.
-    It's an array to merge with the page configuration array, using the [arrayMergeReplaceRecursive technique](https://github.com/lingtalfi/Bat/blob/master/ArrayTool.md#arraymergereplacerecursive).
+    It's an array to merge with the page configuration array.
     
     
 
@@ -55,6 +56,7 @@ Methods
 - [PageConfUpdator::__construct](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator/__construct.md) &ndash; Builds the PageConfUpdator instance.
 - [PageConfUpdator::create](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator/create.md) &ndash; Builds and returns a PageConfUpdator instance.
 - [PageConfUpdator::update](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator/update.md) &ndash; Updates the given $pageConf array.
+- [PageConfUpdator::setMergeArray](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator/setMergeArray.md) &ndash; Sets the mergeArray.
 
 
 
