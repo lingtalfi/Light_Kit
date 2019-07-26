@@ -263,6 +263,10 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 History Log
 =============
 
+- 1.7.2 -- 2019-07-26
+
+    - fix typo
+    
 - 1.7.1 -- 2019-07-26
 
     - fix PageConfUpdator merging using ams algo instead of array_replace_recursive
