@@ -30,7 +30,7 @@ With:
 
 - $zone: the name of the zone containing the widget
 - $identifier: the "identifier" key of the widget to update (this should be set by the plugin author).
-     See more details in my conception notes about the page updator.
+     See more details in my [conception notes about the page updator](https://github.com/lingtalfi/Light_Kit/blob/master/doc/pages/conception-notes.md#page-conf-updator).
 
 
 
@@ -38,7 +38,7 @@ With:
 
 The layer will be merged with the page configuration array using the ams algorithm,
 which allows use to replace items from an associative array and add items to numerically indexed arrays.
-For more details refer to the ams algorithm documentation.
+For more details refer to the [ams algorithm documentation](https://github.com/lingtalfi/Bat/blob/master/ArrayTool.md#arraymergereplacerecursive).
 
 
 

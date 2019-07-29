@@ -7,7 +7,7 @@ Conception notes
 
 * [Dynamic variables](#dynamic-variables)
 * [Lazy reference resolver](#lazy-reference-resolver)
-* [Page conf update array](#page-conf-update-array)
+* [Page conf updator](#page-conf-updator)
 
 
 
