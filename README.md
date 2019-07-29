@@ -263,6 +263,10 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 History Log
 =============
 
+- 1.8.0 -- 2019-07-29
+
+    - add PageConfUpdator->updateWidget method, and revisit page updator conception notes
+    
 - 1.7.2 -- 2019-07-26
 
     - fix typo
