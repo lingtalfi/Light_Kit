@@ -29,6 +29,9 @@ kit:
                             resolvers:
                                 METHOD_CALL:
                                     instance: Ling\Light_Kit\PageConfigurationTransformer\LazyReferenceResolver\MethodCallResolver
+                                    methods:
+                                        setContainer:
+                                            container: @container()
                                     callable_method: resolve
                                 ROUTE:
                                     instance: Ling\Light_Kit\PageConfigurationTransformer\LazyReferenceResolver\RouteResolver

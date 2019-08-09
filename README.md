@@ -84,6 +84,30 @@ kit:
 
     methods_collection:
         -
+            method: addPageConfigurationTransformer
+            args:
+                -
+                    instance: Ling\Light_Kit\PageConfigurationTransformer\DynamicVariableTransformer
+        -
+            method: addPageConfigurationTransformer
+            args:
+                -
+                    instance: Ling\Light_Kit\PageConfigurationTransformer\LazyReferenceResolver
+                    methods:
+                        setResolvers:
+                            resolvers:
+                                METHOD_CALL:
+                                    instance: Ling\Light_Kit\PageConfigurationTransformer\LazyReferenceResolver\MethodCallResolver
+                                    methods:
+                                        setContainer:
+                                            container: @container()
+                                    callable_method: resolve
+                                ROUTE:
+                                    instance: Ling\Light_Kit\PageConfigurationTransformer\LazyReferenceResolver\RouteResolver
+                                    callable_method: resolve
+
+
+        -
             method: registerWidgetHandler
             args:
                 - picasso
@@ -263,6 +287,10 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 History Log
 =============
 
+- 1.9.0 -- 2019-08-09
+
+    - now MethodCallResolver->resolve can handle services calls
+    
 - 1.8.2 -- 2019-08-09
 
     - update MethodCallResolver documentation
