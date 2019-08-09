@@ -263,6 +263,10 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 History Log
 =============
 
+- 1.8.2 -- 2019-08-09
+
+    - update MethodCallResolver documentation
+    
 - 1.8.1 -- 2019-07-29
 
     - fix potential bad commit
