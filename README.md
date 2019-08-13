@@ -78,7 +78,7 @@ kit:
                 instance: Ling\Kit\ConfStorage\BabyYamlConfStorage
                 methods:
                     setRootDir:
-                        rootDir: ${app_dir}/config/kit/pages
+                        rootDir: ${app_dir}/config/data/Light_Kit/pages
         setContainer:
             container: @container()
 
@@ -208,13 +208,13 @@ A page configuration file is a [babyYaml](https://github.com/lingtalfi/BabyYaml)
 Each file contains the configuration for one given page.
 
 All page configuration files are located in the root dir defined in the service configuration (the setRootDir method of the BabyYamlConfStorage instance),
-which defaults to: **config/kit/pages** (note: in this document, all relative paths are relative to the light app root dir, unless otherwise specified).
+which defaults to: **config/data/Light_Kit/pages** (note: in this document, all relative paths are relative to the light app root dir, unless otherwise specified).
 
 
 So for instance we have this kind of structure:
 
 ```txt
-- config/kit/pages/
+- config/data/Light_Kit/pages/
 ----- page_one.byml
 ----- page_two.byml
 ----- ...
@@ -239,7 +239,7 @@ Those added files must be in babyYaml format, and the idea is that they will be 
 So for instance for the page_one page, we could have this:
 
 ```txt
-- config/kit/pages/
+- config/data/Light_Kit/pages/
 ----- page_one.byml
 ----- page_one/
 --------- Light_Plugin_ABC.byml
@@ -287,6 +287,10 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 History Log
 =============
 
+- 1.10.0 -- 2019-08-13
+
+    - change default config path to config/data/Light_Kit/pages
+    
 - 1.9.0 -- 2019-08-09
 
     - now MethodCallResolver->resolve can handle services calls
