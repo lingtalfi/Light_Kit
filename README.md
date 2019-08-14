@@ -78,7 +78,7 @@ kit:
                 instance: Ling\Kit\ConfStorage\BabyYamlConfStorage
                 methods:
                     setRootDir:
-                        rootDir: ${app_dir}/config/data/Light_Kit/pages
+                        rootDir: ${app_dir}/config/data
         setContainer:
             container: @container()
 
@@ -208,19 +208,19 @@ A page configuration file is a [babyYaml](https://github.com/lingtalfi/BabyYaml)
 Each file contains the configuration for one given page.
 
 All page configuration files are located in the root dir defined in the service configuration (the setRootDir method of the BabyYamlConfStorage instance),
-which defaults to: **config/data/Light_Kit/pages** (note: in this document, all relative paths are relative to the light app root dir, unless otherwise specified).
+which defaults to: **config/data** (note: in this document, all relative paths are relative to the light app root dir, unless otherwise specified).
 
 
 So for instance we have this kind of structure:
 
 ```txt
-- config/data/Light_Kit/pages/
------ page_one.byml
------ page_two.byml
------ ...
------ $pluginName/                  # for instance $pluginName = Light_Kit_MySite
---------- page_three.byml
---------- page_xxx.byml
+- config/data/
+----- Light_Plugin_One/kit/
+--------- page_one.byml
+--------- page_two.byml
+----- Light_Plugin_Two/data_for_kit/
+--------- page_one.byml
+--------- page_two.byml
 ``` 
 
 
@@ -236,14 +236,16 @@ For instance, imagine the dashboard of an admin website, with some weather widge
 The babyYaml way used by **Light_Kit** is to have a folder named like the page, inside of which plugins can put their own additions.
 Those added files must be in babyYaml format, and the idea is that they will be merged with the main configuration file.
 
-So for instance for the page_one page, we could have this:
+So for instance for the **page_one** page of the **Light_Plugin_one** plugin, we could have this:
 
 ```txt
-- config/data/Light_Kit/pages/
------ page_one.byml
------ page_one/
---------- Light_Plugin_ABC.byml
---------- Light_Plugin_DEF.byml
+- config/data/
+----- Light_Plugin_One/kit/
+--------- page_one.byml
+--------- page_one/
+------------- Light_Plugin_ABC.byml
+------------- Light_Plugin_DEF.byml
+--------- page_two.byml
 --------- ...
 ```
 
@@ -287,6 +289,10 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 History Log
 =============
 
+- 1.11.0 -- 2019-08-14
+
+    - change service configuration to accommodate light new application recommended structure philosophy
+    
 - 1.10.0 -- 2019-08-13
 
     - change default config path to config/data/Light_Kit/pages

@@ -9,7 +9,7 @@ kit:
                 instance: Ling\Kit\ConfStorage\BabyYamlConfStorage
                 methods:
                     setRootDir:
-                        rootDir: ${app_dir}/config/data/Light_Kit/pages
+                        rootDir: ${app_dir}/config/data
         setContainer:
             container: @container()
 
