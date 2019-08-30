@@ -294,6 +294,10 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
+- 1.12.1 -- 2019-08-30
+
+    - fix LightKitPageRenderer->getHtmlPageCopilot not setting the copilot property
+    
 - 1.12.0 -- 2019-08-30
 
     - update LightKitPageRenderer, now uses the html_page_copilot service

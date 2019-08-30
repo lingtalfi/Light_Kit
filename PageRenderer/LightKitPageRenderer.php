@@ -223,7 +223,10 @@ class LightKitPageRenderer extends KitPageRenderer
      */
     protected function getHtmlPageCopilot(): HtmlPageCopilot
     {
-        return $this->getContainer()->get('html_page_copilot');
+        if (null === $this->copilot) {
+            $this->copilot = $this->getContainer()->get('html_page_copilot');
+        }
+        return $this->copilot;
     }
 
 

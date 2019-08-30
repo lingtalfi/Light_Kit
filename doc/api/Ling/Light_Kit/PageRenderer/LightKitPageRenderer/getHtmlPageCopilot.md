@@ -47,7 +47,7 @@ Returns [HtmlPageCopilot](https://github.com/lingtalfi/HtmlPageTools/blob/master
 
 Source Code
 ===========
-See the source code for method [LightKitPageRenderer::getHtmlPageCopilot](https://github.com/lingtalfi/Light_Kit/blob/master/PageRenderer/LightKitPageRenderer.php#L224-L227)
+See the source code for method [LightKitPageRenderer::getHtmlPageCopilot](https://github.com/lingtalfi/Light_Kit/blob/master/PageRenderer/LightKitPageRenderer.php#L224-L230)
 
 
 See Also
