@@ -31,6 +31,7 @@ Summary
 - [How does it work?](#how-does-it-work)
 - [BabyYaml page configuration files](#babyyaml-page-configuration-files)
 - [Calling a page from your Light controller](#calling-a-page-from-your-light-controller)
+- [The html_page_copilot service](#the-html_page_copilot-service)
 - [Conception notes](https://github.com/lingtalfi/Light_Kit/blob/master/doc/pages/conception-notes.md)
 - [History Log](#history-log)
 
@@ -274,7 +275,11 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 ```
 
  
+The html_page_copilot service
+============
 
+All participants of the Light_Kit rendering framework can use the [**html_page_copilot** service](https://github.com/lingtalfi/Light_HtmlPageCopilot)
+to access the htmlPageCopilot instance (and inject their assets on the main page). 
 
 
 
@@ -289,6 +294,10 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
 History Log
 =============
 
+- 1.12.0 -- 2019-08-30
+
+    - update LightKitPageRenderer, now uses the html_page_copilot service
+    
 - 1.11.0 -- 2019-08-14
 
     - change service configuration to accommodate light new application recommended structure philosophy

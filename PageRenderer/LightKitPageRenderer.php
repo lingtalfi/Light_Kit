@@ -4,6 +4,7 @@
 namespace Ling\Light_Kit\PageRenderer;
 
 
+use Ling\HtmlPageTools\Copilot\HtmlPageCopilot;
 use Ling\Kit\ConfStorage\ConfStorageInterface;
 use Ling\Kit\PageRenderer\KitPageRenderer;
 use Ling\Light\ServiceContainer\LightDummyServiceContainer;
@@ -195,6 +196,7 @@ class LightKitPageRenderer extends KitPageRenderer
     }
 
 
+
     //--------------------------------------------
     // METHODS FOR LAYOUT
     //--------------------------------------------
@@ -211,4 +213,18 @@ class LightKitPageRenderer extends KitPageRenderer
         }
         return $this->container;
     }
+
+
+    //--------------------------------------------
+    //
+    //--------------------------------------------
+    /**
+     * @overrides
+     */
+    protected function getHtmlPageCopilot(): HtmlPageCopilot
+    {
+        return $this->getContainer()->get('html_page_copilot');
+    }
+
+
 }
