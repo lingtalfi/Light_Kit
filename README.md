@@ -33,6 +33,7 @@ Summary
 - [Calling a page from your Light controller](#calling-a-page-from-your-light-controller)
 - [The html_page_copilot service](#the-html_page_copilot-service)
 - [Conception notes](https://github.com/lingtalfi/Light_Kit/blob/master/doc/pages/conception-notes.md)
+- [Events](https://github.com/lingtalfi/Light_Kit/blob/master/doc/pages/events.md)
 - [History Log](#history-log)
 
 
@@ -294,6 +295,10 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
+- 1.13.0 -- 2019-11-07
+
+    - update LightKitPageRenderer, now dispatches the Light_Kit.on_page_conf_ready event
+    
 - 1.12.2 -- 2019-10-29
 
     - fix PageConfUpdator not recognizing name property

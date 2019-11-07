@@ -7,13 +7,16 @@ namespace Ling\Light_Kit\PageRenderer;
 use Ling\HtmlPageTools\Copilot\HtmlPageCopilot;
 use Ling\Kit\ConfStorage\ConfStorageInterface;
 use Ling\Kit\PageRenderer\KitPageRenderer;
+use Ling\Light\Events\LightEvent;
 use Ling\Light\ServiceContainer\LightDummyServiceContainer;
 use Ling\Light\ServiceContainer\LightServiceContainerAwareInterface;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
+use Ling\Light_Events\Service\LightEventsService;
 use Ling\Light_Kit\Exception\LightKitException;
 use Ling\Light_Kit\PageConfigurationTransformer\DynamicVariableAwareInterface;
 use Ling\Light_Kit\PageConfigurationTransformer\PageConfigurationTransformerInterface;
 use Ling\Light_Kit\PageConfigurationUpdator\PageConfUpdator;
+use Ling\Light_LightInstance\Service\LightLightInstanceService;
 
 
 /**
@@ -177,6 +180,21 @@ class LightKitPageRenderer extends KitPageRenderer
                     //--------------------------------------------
                     $this->pageName = $pageName;
                     $this->setPageConf($pageConf);
+
+
+                    /**
+                     * @var $events LightEventsService
+                     */
+                    $events = $this->container->get("events");
+                    $event = new LightEvent();
+                    /**
+                     * @var $lightInstance LightLightInstanceService
+                     */
+                    $lightInstance = $this->container->get('light_instance');
+                    $event->setHttpRequest($lightInstance->getHttpRequest());
+                    $event->setLight($lightInstance->getLight());
+                    $event->setVar("pageConf", $pageConf);
+                    $events->dispatch('Light_Kit.on_page_conf_ready', $event);
 
 
                     ob_start();
