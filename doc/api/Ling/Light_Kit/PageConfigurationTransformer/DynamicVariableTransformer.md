@@ -4,7 +4,7 @@
 
 The DynamicVariableTransformer class
 ================
-2019-04-25 --> 2019-11-07
+2019-04-25 --> 2019-11-25
 
 
 

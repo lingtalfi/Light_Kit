@@ -6,6 +6,7 @@ namespace Ling\Light_Kit\PageRenderer;
 
 use Ling\HtmlPageTools\Copilot\HtmlPageCopilot;
 use Ling\Kit\ConfStorage\ConfStorageInterface;
+use Ling\Kit\ConfStorage\VariableAwareConfStorageInterface;
 use Ling\Kit\PageRenderer\KitPageRenderer;
 use Ling\Light\Events\LightEvent;
 use Ling\Light\ServiceContainer\LightDummyServiceContainer;
@@ -148,6 +149,9 @@ class LightKitPageRenderer extends KitPageRenderer
                 //--------------------------------------------
                 // GET THE PAGE CONF
                 //--------------------------------------------
+                if ($this->confStorage instanceof VariableAwareConfStorageInterface) {
+                    $this->confStorage->setVariables($dynamicVariables);
+                }
                 $pageConf = $this->confStorage->getPageConf($pageName);
                 if (false !== $pageConf) {
 

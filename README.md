@@ -295,6 +295,10 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
+- 1.14.0 -- 2019-11-25
+
+    - update LightKitPageRenderer->renderPage, now passes dynamic variables to confStorage is necessary
+    
 - 1.13.0 -- 2019-11-07
 
     - update LightKitPageRenderer, now dispatches the Light_Kit.on_page_conf_ready event
