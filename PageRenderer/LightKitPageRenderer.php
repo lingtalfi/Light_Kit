@@ -159,7 +159,6 @@ class LightKitPageRenderer extends KitPageRenderer
                     //--------------------------------------------
                     // UPDATE THE CONF
                     //--------------------------------------------
-
                     if (null !== $pageConfUpdator) {
                         $pageConfUpdator->update($pageConf);
                     }

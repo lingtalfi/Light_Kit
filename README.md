@@ -295,6 +295,10 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
+- 1.15.0 -- 2019-12-10
+
+    - update PageConfUpdator->updateWidget, the second argument now can be a callable instead of just an array
+    
 - 1.14.0 -- 2019-11-25
 
     - update LightKitPageRenderer->renderPage, now passes dynamic variables to confStorage is necessary
