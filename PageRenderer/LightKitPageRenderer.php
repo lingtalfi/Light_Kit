@@ -17,7 +17,6 @@ use Ling\Light_Kit\Exception\LightKitException;
 use Ling\Light_Kit\PageConfigurationTransformer\DynamicVariableAwareInterface;
 use Ling\Light_Kit\PageConfigurationTransformer\PageConfigurationTransformerInterface;
 use Ling\Light_Kit\PageConfigurationUpdator\PageConfUpdator;
-use Ling\Light_LightInstance\Service\LightLightInstanceService;
 
 
 /**
@@ -189,13 +188,7 @@ class LightKitPageRenderer extends KitPageRenderer
                      * @var $events LightEventsService
                      */
                     $events = $this->container->get("events");
-                    $event = new LightEvent();
-                    /**
-                     * @var $lightInstance LightLightInstanceService
-                     */
-                    $lightInstance = $this->container->get('light_instance');
-                    $event->setHttpRequest($lightInstance->getHttpRequest());
-                    $event->setLight($lightInstance->getLight());
+                    $event = LightEvent::createByContainer($this->container);
                     $event->setVar("pageConf", $pageConf);
                     $events->dispatch('Light_Kit.on_page_conf_ready', $event);
 

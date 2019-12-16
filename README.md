@@ -295,6 +295,10 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
+- 1.16.0 -- 2019-12-16
+
+    - update plugin to accommodate new Light service container
+
 - 1.15.0 -- 2019-12-10
 
     - update PageConfUpdator->updateWidget, the second argument now can be a callable instead of just an array
