@@ -151,6 +151,7 @@ class LightKitPageRenderer extends KitPageRenderer
                 if ($this->confStorage instanceof VariableAwareConfStorageInterface) {
                     $this->confStorage->setVariables($dynamicVariables);
                 }
+
                 $pageConf = $this->confStorage->getPageConf($pageName);
                 if (false !== $pageConf) {
 
