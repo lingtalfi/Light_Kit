@@ -263,3 +263,13 @@
     - Ling:Kit_PrototypeWidget:1.1.2+
     - Ling:Light:0.69.29+
     - Ling:Light_Events:1.9.6+
+
+1.17.4: 
+    - Ling:ArrayVariableResolver:1.2.3+
+    - Ling:Bat:1.307+
+    - Ling:HtmlPageTools:2.2.2+
+    - Ling:Kit:1.12.3+
+    - Ling:Kit_PicassoWidget:1.30.2+
+    - Ling:Kit_PrototypeWidget:1.1.2+
+    - Ling:Light:0.69.29+
+    - Ling:Light_Events:1.9.6+

@@ -192,8 +192,9 @@ Because we are using the babyYaml storage, this is done via page configuration f
 
 BabyYaml page configuration files
 ===========
+2019-04-25 -> 2021-02-26
 
-A page configuration file is a [babyYaml](https://github.com/lingtalfi/BabyYaml) file which contains the [page configuration array defined in kit](https://github.com/lingtalfi/Kit).
+A page configuration file (aka kit page) is a [babyYaml](https://github.com/lingtalfi/BabyYaml) file which contains the [page configuration array defined in kit](https://github.com/lingtalfi/Kit).
 
 Each file contains the configuration for one given page.
 
@@ -283,6 +284,10 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
+- 1.17.4 -- 2021-02-26
+
+    - update readme, add precision
+  
 - 1.17.3 -- 2021-02-26
 
     - fix undeclared dependencies to Kit_PicassoWidget and Kit_PrototypeWidget planets
