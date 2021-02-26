@@ -1,6 +1,6 @@
 Light_Kit
 ===========
-2019-04-25 -> 2020-11-27
+2019-04-25 -> 2021-02-26
 
 
 
@@ -283,9 +283,13 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
+- 1.17.3 -- 2021-02-26
+
+    - fix undeclared dependencies to Kit_PicassoWidget and Kit_PrototypeWidget planets
+  
 - 1.17.2 -- 2020-12-08
 
-    - Fix lpi-deps not using natsort.
+    - Fix lpi-deps not using natsort
 
 - 1.17.1 -- 2020-12-04
 

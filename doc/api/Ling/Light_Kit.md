@@ -1,6 +1,6 @@
 Ling/Light_Kit
 ================
-2019-04-25 --> 2020-12-08
+2019-04-25 --> 2021-02-26
 
 
 
@@ -67,10 +67,12 @@ Table of contents
 
 Dependencies
 ============
+- [ArrayVariableResolver](https://github.com/lingtalfi/ArrayVariableResolver)
 - [Bat](https://github.com/lingtalfi/Bat)
 - [HtmlPageTools](https://github.com/lingtalfi/HtmlPageTools)
 - [Kit](https://github.com/lingtalfi/Kit)
-- [ArrayVariableResolver](https://github.com/lingtalfi/ArrayVariableResolver)
+- [Kit_PicassoWidget](https://github.com/lingtalfi/Kit_PicassoWidget)
+- [Kit_PrototypeWidget](https://github.com/lingtalfi/Kit_PrototypeWidget)
 - [Light](https://github.com/lingtalfi/Light)
 - [Light_Events](https://github.com/lingtalfi/Light_Events)
 
