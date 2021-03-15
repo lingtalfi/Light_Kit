@@ -14,6 +14,7 @@ use Ling\Light\ServiceContainer\LightServiceContainerAwareInterface;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 use Ling\Light_Events\Service\LightEventsService;
 use Ling\Light_Kit\Exception\LightKitException;
+use Ling\Light_Kit\Helper\WidgetVariablesHelper;
 use Ling\Light_Kit\PageConfigurationTransformer\DynamicVariableAwareInterface;
 use Ling\Light_Kit\PageConfigurationTransformer\PageConfigurationTransformerInterface;
 use Ling\Light_Kit\PageConfigurationUpdator\PageConfUpdator;
@@ -131,15 +132,31 @@ class LightKitPageRenderer extends KitPageRenderer
     /**
      * Renders the given page.
      *
+     * Available options are:
+     *
+     * - widgetVariables: array. An array of @page(widget coordinates) => widgetConf variables. Use this array to override the "vars" entry of widget(s) configuration.
+     * - widgetConf: array. An array of @page(widget coordinates) => widgetConf. Use this array to override one or more widget's configuration.
+     *
+     * - dynamicVariables: array. An array of variables to use to pass to the confStorage object and/or the transformers objects, if they need it.
+     * - pageConfUpdator: PageConfUpdator = null. If defined, its transform method will be called first, before the transformer objects.
+     *
+     *
+     *
      *
      * @param string $pageName
-     * @param array $dynamicVariables
-     * @param PageConfUpdator|null $pageConfUpdator
+     * @param array $options
      * @return string
      * @throws \Exception
      */
-    public function renderPage(string $pageName, array $dynamicVariables = [], PageConfUpdator $pageConfUpdator = null): string
+    public function renderPage(string $pageName, array $options = []): string
     {
+
+
+        $widgetVariables = $options['widgetVariables'] ?? [];
+        $widgetConf = $options['widgetConf'] ?? [];
+        $dynamicVariables = $options['dynamicVariables'] ?? [];
+        $pageConfUpdator = $options['pageConfUpdator'] ?? null;
+
 
         if (null !== $this->applicationDir) {
             if (null !== $this->confStorage) {
@@ -153,13 +170,29 @@ class LightKitPageRenderer extends KitPageRenderer
                 }
 
                 $pageConf = $this->confStorage->getPageConf($pageName);
+
                 if (false !== $pageConf) {
 
 
                     //--------------------------------------------
-                    // UPDATE THE CONF
+                    // UPDATE THE CONF WITH WIDGET VARIABLES & CONF
+                    //--------------------------------------------
+                    if (count($widgetConf) > 0) {
+                        WidgetVariablesHelper::injectWidgetConf($pageConf, $widgetConf);
+                    }
+
+                    if (count($widgetVariables) > 0) {
+                        WidgetVariablesHelper::injectWidgetVariables($pageConf, $widgetVariables);
+                    }
+
+
+                    //--------------------------------------------
+                    // UPDATE THE CONF WITH PAGE CONF UPDATOR
                     //--------------------------------------------
                     if (null !== $pageConfUpdator) {
+                        /**
+                         * @var $pageConfUpdator PageConfUpdator
+                         */
                         $pageConfUpdator->update($pageConf);
                     }
 
@@ -178,6 +211,7 @@ class LightKitPageRenderer extends KitPageRenderer
                         $transformer->transform($pageConf);
                     }
 
+
                     //--------------------------------------------
                     // CONFIGURATION
                     //--------------------------------------------
@@ -191,7 +225,7 @@ class LightKitPageRenderer extends KitPageRenderer
                     $events = $this->container->get("events");
                     $event = LightEvent::createByContainer($this->container);
                     $event->setVar("pageConf", $pageConf);
-                    $events->dispatch('Light_Kit.on_page_conf_ready', $event);
+                    $events->dispatch('Ling.Light_Kit.on_page_conf_ready', $event);
 
 
                     ob_start();

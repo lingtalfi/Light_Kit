@@ -1,6 +1,6 @@
 Ling/Light_Kit
 ================
-2019-04-25 --> 2021-03-05
+2019-04-25 --> 2021-03-15
 
 
 
@@ -12,6 +12,9 @@ Table of contents
     - [LightKitCssFileGenerator::__construct](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/CssFileGenerator/LightKitCssFileGenerator/__construct.md) &ndash; Builds the LightKitCssFileGenerator instance.
     - [LightKitCssFileGenerator::generate](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/CssFileGenerator/LightKitCssFileGenerator/generate.md) &ndash; and returns the url to this css file.
 - [LightKitException](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/Exception/LightKitException.md) &ndash; The LightKitException class.
+- [WidgetVariablesHelper](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/Helper/WidgetVariablesHelper.md) &ndash; The WidgetVariablesHelper class.
+    - [WidgetVariablesHelper::injectWidgetVariables](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/Helper/WidgetVariablesHelper/injectWidgetVariables.md) &ndash; Injects the widget variables in the page conf.
+    - [WidgetVariablesHelper::injectWidgetConf](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/Helper/WidgetVariablesHelper/injectWidgetConf.md) &ndash; Injects the widget conf in the page conf.
 - [DynamicVariableAwareInterface](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/DynamicVariableAwareInterface.md) &ndash; The DynamicVariableAwareInterface interface.
     - [DynamicVariableAwareInterface::setVariables](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/DynamicVariableAwareInterface/setVariables.md) &ndash; Sets the dynamic variables into the instance.
 - [DynamicVariableTransformer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/DynamicVariableTransformer.md) &ndash; The DynamicVariableTransformer class.
@@ -40,6 +43,10 @@ Table of contents
     - [LightExecuteNotationResolver::transform](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/LightExecuteNotationResolver/transform.md) &ndash; Transforms the given page configuration array in place.
 - [PageConfigurationTransformerInterface](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/PageConfigurationTransformerInterface.md) &ndash; The PageConfigurationTransformerInterface interface.
     - [PageConfigurationTransformerInterface::transform](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/PageConfigurationTransformerInterface/transform.md) &ndash; Transforms the given page configuration array in place.
+- [ThemeTransformer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/ThemeTransformer.md) &ndash; The ThemeTransformer class.
+    - [ThemeTransformer::__construct](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/ThemeTransformer/__construct.md) &ndash; Builds the ThemeTransformer instance.
+    - [ThemeTransformer::setTheme](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/ThemeTransformer/setTheme.md) &ndash; Sets the theme.
+    - [ThemeTransformer::transform](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/ThemeTransformer/transform.md) &ndash; Transforms the given page configuration array in place.
 - [PageConfUpdator](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator.md) &ndash; The PageConfUpdator class.
     - [PageConfUpdator::__construct](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator/__construct.md) &ndash; Builds the PageConfUpdator instance.
     - [PageConfUpdator::create](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator/create.md) &ndash; Builds and returns a PageConfUpdator instance.

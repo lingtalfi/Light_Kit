@@ -1,6 +1,6 @@
 Light_Kit
 ===========
-2019-04-25 -> 2021-03-05
+2019-04-25 -> 2021-03-15
 
 
 
@@ -210,7 +210,7 @@ So for instance we have this kind of structure:
 
 ```txt
 - config/data/
------ Light_Plugin_One/kit/
+----- Light_Plugin_One/Ling.Light_Kit/
 --------- page_one.byml
 --------- page_two.byml
 ----- Light_Plugin_Two/data_for_kit/
@@ -235,7 +235,7 @@ So for instance for the **page_one** page of the **Light_Plugin_one** plugin, we
 
 ```txt
 - config/data/
------ Light_Plugin_One/kit/
+----- Light_Plugin_One/Ling.Light_Kit/
 --------- page_one.byml
 --------- page_one/
 ------------- Light_Plugin_ABC.byml
@@ -288,6 +288,15 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
+- 1.17.7 -- 2021-03-15
+
+    - update planet to adapt Ling.Light:0.70.0
+
+-- 1.17.7 -- 2021-03-12
+
+    - add ThemeTransformer class
+    - update LightKitPageRenderer->renderPage method signature 
+
 - 1.17.6 -- 2021-03-05
 
     - update README.md, add install alternative
@@ -330,7 +339,7 @@ History Log
     
 - 1.13.0 -- 2019-11-07
 
-    - update LightKitPageRenderer, now dispatches the Light_Kit.on_page_conf_ready event
+    - update LightKitPageRenderer, now dispatches the Ling.Light_Kit.on_page_conf_ready event
     
 - 1.12.2 -- 2019-10-29
 
@@ -350,7 +359,7 @@ History Log
     
 - 1.10.0 -- 2019-08-13
 
-    - change default config path to config/data/Light_Kit/pages
+    - change default config path to config/data/Ling.Light_Kit/pages
     
 - 1.9.0 -- 2019-08-09
 

@@ -3,6 +3,10 @@ https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/CssFil
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/CssFileGenerator/LightKitCssFileGenerator/generate.md
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/CssFileGenerator/LightKitCssFileGenerator.md
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/Exception/LightKitException.md
+https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/Helper/WidgetVariablesHelper/doInjectWidgetVariables.md
+https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/Helper/WidgetVariablesHelper/injectWidgetConf.md
+https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/Helper/WidgetVariablesHelper/injectWidgetVariables.md
+https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/Helper/WidgetVariablesHelper.md
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/DynamicVariableAwareInterface/setVariables.md
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/DynamicVariableAwareInterface.md
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/DynamicVariableTransformer/__construct.md
@@ -31,6 +35,10 @@ https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageCo
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/LightExecuteNotationResolver.md
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/PageConfigurationTransformerInterface/transform.md
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/PageConfigurationTransformerInterface.md
+https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/ThemeTransformer/__construct.md
+https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/ThemeTransformer/setTheme.md
+https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/ThemeTransformer/transform.md
+https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/ThemeTransformer.md
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator/__construct.md
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator/create.md
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator/setMergeArray.md
