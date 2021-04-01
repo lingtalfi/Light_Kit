@@ -23,8 +23,8 @@ public static [WidgetVariablesHelper::injectWidgetVariables](https://github.com/
 
 Injects the widget variables in the page conf.
 
-We use the widget variables system.
-The widget variables is an array of widget coordinates => variables (to merge with the existing widget conf's variables).
+We use the [widget variables system](https://github.com/lingtalfi/Light_Kit/blob/master/doc/pages/conception-notes.md#widget-variables-system).
+The widget variables is an array of [widget coordinates](https://github.com/lingtalfi/Light_Kit/blob/master/doc/pages/conception-notes.md#widget-coordinates) => variables (to merge with the existing widget conf's variables).
 
 
 

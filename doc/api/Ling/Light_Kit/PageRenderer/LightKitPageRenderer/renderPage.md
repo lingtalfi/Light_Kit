@@ -25,11 +25,14 @@ Renders the given page.
 
 Available options are:
 
-- widgetVariables: array. An array of widget coordinates => widgetConf variables. Use this array to override the "vars" entry of widget(s) configuration.
-- widgetConf: array. An array of widget coordinates => widgetConf. Use this array to override one or more widget's configuration.
+- widgetVariables: array. An array of [widget coordinates](https://github.com/lingtalfi/Light_Kit/blob/master/doc/pages/conception-notes.md#widget-coordinates) => widgetConf variables. Use this array to override the "vars" entry of widget(s) configuration.
+- widgetConf: array. An array of [widget coordinates](https://github.com/lingtalfi/Light_Kit/blob/master/doc/pages/conception-notes.md#widget-coordinates) => widgetConf. Use this array to override one or more widget's configuration.
 
 - dynamicVariables: array. An array of variables to use to pass to the confStorage object and/or the transformers objects, if they need it.
 - pageConfUpdator: PageConfUpdator = null. If defined, its transform method will be called first, before the transformer objects.
+
+
+More about [widget coordinates](https://github.com/lingtalfi/Light_Kit/blob/master/doc/pages/conception-notes.md#widget-coordinates).
 
 
 
@@ -66,7 +69,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightKitPageRenderer::renderPage](https://github.com/lingtalfi/Light_Kit/blob/master/PageRenderer/LightKitPageRenderer.php#L151-L245)
+See the source code for method [LightKitPageRenderer::renderPage](https://github.com/lingtalfi/Light_Kit/blob/master/PageRenderer/LightKitPageRenderer.php#L154-L248)
 
 
 See Also

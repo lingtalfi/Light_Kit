@@ -23,8 +23,8 @@ public static [WidgetVariablesHelper::injectWidgetConf](https://github.com/lingt
 
 Injects the widget conf in the page conf.
 
-We use the widget variables system.
-The widget conf is an array of widget coordinates => widget conf (to merge with the existing widget conf).
+We use the [widget variables system](https://github.com/lingtalfi/Light_Kit/blob/master/doc/pages/conception-notes.md#widget-variables-system).
+The widget conf is an array of [widget coordinates](https://github.com/lingtalfi/Light_Kit/blob/master/doc/pages/conception-notes.md#widget-coordinates) => widget conf (to merge with the existing widget conf).
 
 
 

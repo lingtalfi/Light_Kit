@@ -1,6 +1,6 @@
 Conception notes 
 ========
-2019-05-15 -> 2021-03-12
+2019-05-15 -> 2021-04-01
 
 
 
@@ -16,7 +16,7 @@ Conception notes
 
 Widget coordinates
 -----------
-2021-03-12
+2021-03-12 -> 2021-04-01
 
 **Widget coordinates** allow you to target a widget in a given page.
 
@@ -28,6 +28,7 @@ With:
 
 - $zoneId: string, the identifier of the zone
 - $widgetId: string, the identifier of the widget, which must be defined at the widget configuration level by using the **id** key.
+        The widget id must be unique in the context of the zone.
 
 
 In an [eco-structure](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/nomenclature.md#eco-structure) where third-party plugins collaborate to create a **kit page conf array**, the **widget coordinates**

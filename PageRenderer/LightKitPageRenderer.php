@@ -141,6 +141,9 @@ class LightKitPageRenderer extends KitPageRenderer
      * - pageConfUpdator: PageConfUpdator = null. If defined, its transform method will be called first, before the transformer objects.
      *
      *
+     * More about [widget coordinates](https://github.com/lingtalfi/Light_Kit/blob/master/doc/pages/conception-notes.md#widget-coordinates).
+     *
+     *
      *
      *
      * @param string $pageName

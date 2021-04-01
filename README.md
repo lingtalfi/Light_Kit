@@ -1,6 +1,6 @@
 Light_Kit
 ===========
-2019-04-25 -> 2021-03-15
+2019-04-25 -> 2021-04-01
 
 
 
@@ -288,11 +288,15 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
-- 1.17.7 -- 2021-03-15
+- 1.17.9 -- 2021-04-01
+
+    - add widget coordinates comment in conception notes, fix missing docTool pages
+  
+- 1.17.8 -- 2021-03-15
 
     - update planet to adapt Ling.Light:0.70.0
 
--- 1.17.7 -- 2021-03-12
+- 1.17.7 -- 2021-03-12
 
     - add ThemeTransformer class
     - update LightKitPageRenderer->renderPage method signature 
