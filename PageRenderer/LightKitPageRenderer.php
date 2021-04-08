@@ -136,6 +136,7 @@ class LightKitPageRenderer extends KitPageRenderer
      *
      * - widgetVariables: array. An array of @page(widget coordinates) => widgetConf variables. Use this array to override the "vars" entry of widget(s) configuration.
      * - widgetConf: array. An array of @page(widget coordinates) => widgetConf. Use this array to override one or more widget's configuration.
+     * - pageConf: array=false. The kit page conf. If you already have the config, you can use it directly.
      *
      * - dynamicVariables: array. An array of variables to use to pass to the confStorage object and/or the transformers objects, if they need it.
      * - pageConfUpdator: PageConfUpdator = null. If defined, its transform method will be called first, before the transformer objects.
@@ -157,22 +158,27 @@ class LightKitPageRenderer extends KitPageRenderer
 
         $widgetVariables = $options['widgetVariables'] ?? [];
         $widgetConf = $options['widgetConf'] ?? [];
+        $pageConf = $options['pageConf'] ?? false;
         $dynamicVariables = $options['dynamicVariables'] ?? [];
         $pageConfUpdator = $options['pageConfUpdator'] ?? null;
 
 
         if (null !== $this->applicationDir) {
-            if (null !== $this->confStorage) {
+
+
+            if (false !== $pageConf || null !== $this->confStorage) {
 
 
                 //--------------------------------------------
                 // GET THE PAGE CONF
                 //--------------------------------------------
-                if ($this->confStorage instanceof VariableAwareConfStorageInterface) {
-                    $this->confStorage->setVariables($dynamicVariables);
+                if (false === $pageConf) {
+                    if ($this->confStorage instanceof VariableAwareConfStorageInterface) {
+                        $this->confStorage->setVariables($dynamicVariables);
+                    }
+                    $pageConf = $this->confStorage->getPageConf($pageName);
                 }
 
-                $pageConf = $this->confStorage->getPageConf($pageName);
 
                 if (false !== $pageConf) {
 

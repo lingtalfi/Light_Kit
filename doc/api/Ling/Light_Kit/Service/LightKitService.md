@@ -4,7 +4,7 @@
 
 The LightKitService class
 ================
-2019-04-25 --> 2021-04-01
+2019-04-25 --> 2021-04-08
 
 
 
@@ -104,4 +104,4 @@ See the source code of [Ling\Light_Kit\Service\LightKitService](https://github.c
 
 SeeAlso
 ==============
-Previous class: [LightKitPageRenderer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageRenderer/LightKitPageRenderer.md)<br>
+Previous class: [LightKitPageRenderer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageRenderer/LightKitPageRenderer.md)<br>Next class: [LightKitPicassoWidgetHandler](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPicassoWidgetHandler.md)<br>

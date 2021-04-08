@@ -1,6 +1,6 @@
 Ling/Light_Kit
 ================
-2019-04-25 --> 2021-04-01
+2019-04-25 --> 2021-04-08
 
 
 
@@ -87,6 +87,14 @@ Table of contents
     - KitPageRenderer::addWidgetConfDecorator &ndash; Adds a widget configuration decorator to this instance.
     - KitPageRenderer::printPage &ndash; Prints the page.
     - KitPageRenderer::printZone &ndash; Prints a zone.
+- [LightKitPicassoWidgetHandler](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPicassoWidgetHandler.md) &ndash; The LightKitPicassoWidgetHandler class.
+    - [LightKitPicassoWidgetHandler::__construct](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPicassoWidgetHandler/__construct.md) &ndash; Builds the LightKitPicassoWidgetHandler instance.
+    - [LightKitPicassoWidgetHandler::getContainer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPicassoWidgetHandler/getContainer.md) &ndash; Returns the container of this instance.
+    - [LightKitPicassoWidgetHandler::setContainer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPicassoWidgetHandler/setContainer.md) &ndash; Sets the container.
+    - PicassoWidgetHandler::setKitPageRenderer &ndash; Sets the KitPageRenderer instance.
+    - PicassoWidgetHandler::setWidgetBaseDir &ndash; Sets the widgetBaseDir.
+    - PicassoWidgetHandler::process &ndash; Process the widget.
+    - PicassoWidgetHandler::render &ndash; Returns the html code of the widget, according to the widget configuration.
 
 
 Dependencies

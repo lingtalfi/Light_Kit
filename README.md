@@ -1,6 +1,6 @@
 Light_Kit
 ===========
-2019-04-25 -> 2021-04-01
+2019-04-25 -> 2021-08-01
 
 
 
@@ -64,7 +64,7 @@ So basically, you delegate the rendering logic to the kit service provided by th
 
 How does it work?
 ==========
-
+2019-04-25 -> 2021-04-08
 
 Here is the service file provided by Light_Kit.
 
@@ -74,62 +74,64 @@ You don't have to change anything, but I will explain it anyway just in case:
 
 ```yaml
 kit:
-  instance: Ling\Light_Kit\Service\LightKitService
-  methods:
-    configure:
-      settings:
-        application_dir: ${app_dir}
-    setConfStorage:
-      -
-        instance: Ling\Kit\ConfStorage\BabyYamlConfStorage
-        methods:
-          setRootDir:
-            rootDir: ${app_dir}/config/data
-    setContainer:
-      container: @container()
+    instance: Ling\Light_Kit\Service\LightKitService
+    methods:
+        configure:
+            settings:
+                application_dir: ${app_dir}
+        setConfStorage:
+            -
+                instance: Ling\Kit\ConfStorage\BabyYamlConfStorage
+                methods:
+                    setRootDir:
+                        rootDir: ${app_dir}/config/data
+        setContainer:
+            container: @container()
 
-  methods_collection:
-    -
-      method: addPageConfigurationTransformer
-      args:
+    methods_collection:
         -
-          instance: Ling\Light_Kit\PageConfigurationTransformer\DynamicVariableTransformer
-    -
-      method: addPageConfigurationTransformer
-      args:
+            method: addPageConfigurationTransformer
+            args:
+                -
+                    instance: Ling\Light_Kit\PageConfigurationTransformer\DynamicVariableTransformer
         -
-          instance: Ling\Light_Kit\PageConfigurationTransformer\LightExecuteNotationResolver
+            method: addPageConfigurationTransformer
+            args:
+                -
+                    instance: Ling\Light_Kit\PageConfigurationTransformer\LightExecuteNotationResolver
 
 
-    -
-      method: registerWidgetHandler
-      args:
-        - picasso
         -
-          instance: Ling\Kit_PicassoWidget\WidgetHandler\PicassoWidgetHandler
-          constructor_args:
-            options:
-              showCssNuggetHeaders: true
-              showJsNuggetHeaders: true
-          methods:
-            setWidgetBaseDir:
-              dir: ${app_dir}
-    -
-      method: registerWidgetHandler
-      args:
-        - prototype
+            method: registerWidgetHandler
+            args:
+                - picasso
+                -
+                    instance: Ling\Light_Kit\WidgetHandler\LightKitPicassoWidgetHandler
+                    constructor_args:
+                        options:
+                            showCssNuggetHeaders: true
+                            showJsNuggetHeaders: true
+                    methods:
+                        setWidgetBaseDir:
+                            dir: ${app_dir}
+                        setContainer:
+                            container: @container()
         -
-          instance: Ling\Kit_PrototypeWidget\WidgetHandler\PrototypeWidgetHandler
-          methods:
-            setRootDir:
-              appDir: ${app_dir}
+            method: registerWidgetHandler
+            args:
+                - prototype
+                -
+                    instance: Ling\Kit_PrototypeWidget\WidgetHandler\PrototypeWidgetHandler
+                    methods:
+                        setRootDir:
+                            appDir: ${app_dir}
 
 
 kit_css_file_generator:
-  instance: Ling\Light_Kit\CssFileGenerator\LightKitCssFileGenerator
-  constructor_args:
-    rootDir: ${app_dir}/www
-    format: css/tmp/$identifier-compiled-widgets.css
+    instance: Ling\Light_Kit\CssFileGenerator\LightKitCssFileGenerator
+    constructor_args:
+        rootDir: ${app_dir}/www
+        format: css/tmp/$identifier-compiled-widgets.css
 
 ```
 
@@ -254,6 +256,8 @@ How exactly the files are merged is defined inside the [BabyYamlConfStorage](htt
 
 Calling a page from your Light controller
 ===========
+2019-04-25
+
 
 So now that we know where the pages are located, we can simply call them from our Light controllers.
 
@@ -271,6 +275,8 @@ $light->registerRoute("/", function (LightServiceContainerInterface $service) {
  
 The html_page_copilot service
 ============
+2019-04-25
+
 
 All participants of the Light_Kit rendering framework can use the [**html_page_copilot** service](https://github.com/lingtalfi/Light_HtmlPageCopilot)
 to access the htmlPageCopilot instance (and inject their assets on the main page). 
@@ -288,6 +294,10 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
+- 1.17.10 -- 2021-04-08
+
+    - add LightKitPageRenderer->renderPage pageConf option, add own picasso widget handler
+  
 - 1.17.9 -- 2021-04-01
 
     - add widget coordinates comment in conception notes, fix missing docTool pages

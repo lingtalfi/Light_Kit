@@ -31,7 +31,7 @@ kit:
             args:
                 - picasso
                 -
-                    instance: Ling\Kit_PicassoWidget\WidgetHandler\PicassoWidgetHandler
+                    instance: Ling\Light_Kit\WidgetHandler\LightKitPicassoWidgetHandler
                     constructor_args:
                         options:
                             showCssNuggetHeaders: true
@@ -39,6 +39,8 @@ kit:
                     methods:
                         setWidgetBaseDir:
                             dir: ${app_dir}
+                        setContainer:
+                            container: @container()
         -
             method: registerWidgetHandler
             args:
