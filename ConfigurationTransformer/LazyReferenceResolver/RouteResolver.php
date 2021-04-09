@@ -1,6 +1,6 @@
 <?php
 
-namespace Ling\Light_Kit\PageConfigurationTransformer\LazyReferenceResolver;
+namespace Ling\Light_Kit\ConfigurationTransformer\LazyReferenceResolver;
 
 
 use Ling\Bat\SmartCodeTool;

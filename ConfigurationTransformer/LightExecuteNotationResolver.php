@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Ling\Light_Kit\PageConfigurationTransformer;
+namespace Ling\Light_Kit\ConfigurationTransformer;
 
 
 use Ling\Light\Helper\LightHelper;
@@ -11,7 +11,7 @@ use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 /**
  * The LightExecuteNotationResolver class.
  */
-class LightExecuteNotationResolver implements PageConfigurationTransformerInterface, LightServiceContainerAwareInterface
+class LightExecuteNotationResolver implements ConfigurationTransformerInterface, LightServiceContainerAwareInterface
 {
 
 
@@ -44,13 +44,13 @@ class LightExecuteNotationResolver implements PageConfigurationTransformerInterf
 
 
     //--------------------------------------------
-    // PageConfigurationTransformerInterface
+    // ConfigurationTransformerInterface
     //--------------------------------------------
     /**
      * @implementation
      */
-    public function transform(array &$pageConfiguration)
+    public function transform(array &$conf)
     {
-        $pageConfiguration = LightHelper::executeParenthesisWrappersByArray($pageConfiguration, $this->container, ['::']);
+        $conf = LightHelper::executeParenthesisWrappersByArray($conf, $this->container, ['::']);
     }
 }

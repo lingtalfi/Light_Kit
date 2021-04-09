@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Ling\Light_Kit\PageConfigurationTransformer;
+namespace Ling\Light_Kit\ConfigurationTransformer;
 
 
 use Ling\ArrayVariableResolver\ArrayVariableResolverUtil;
@@ -11,7 +11,7 @@ use Ling\ArrayVariableResolver\ArrayVariableResolverUtil;
  *
  *
  */
-class DynamicVariableTransformer implements PageConfigurationTransformerInterface, DynamicVariableAwareInterface
+class DynamicVariableTransformer implements ConfigurationTransformerInterface, DynamicVariableAwareInterface
 {
 
 
@@ -108,17 +108,17 @@ class DynamicVariableTransformer implements PageConfigurationTransformerInterfac
 
 
     //--------------------------------------------
-    // PageConfigurationTransformerInterface
+    // ConfigurationTransformerInterface
     //--------------------------------------------
     /**
      * @implementation
      */
-    public function transform(array &$pageConfiguration)
+    public function transform(array &$conf)
     {
         $this->resolver->setFirstSymbol($this->firstSymbol);
         $this->resolver->setOpeningBracket($this->openingBracket);
         $this->resolver->setClosingBracket($this->closingBracket);
-        $this->resolver->resolve($pageConfiguration, $this->variables);
+        $this->resolver->resolve($conf, $this->variables);
     }
 
 

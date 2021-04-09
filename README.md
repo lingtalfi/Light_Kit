@@ -1,6 +1,6 @@
 Light_Kit
 ===========
-2019-04-25 -> 2021-08-01
+2019-04-25 -> 2021-04-09
 
 
 
@@ -93,12 +93,12 @@ kit:
             method: addPageConfigurationTransformer
             args:
                 -
-                    instance: Ling\Light_Kit\PageConfigurationTransformer\DynamicVariableTransformer
+                    instance: Ling\Light_Kit\ConfigurationTransformer\DynamicVariableTransformer
         -
             method: addPageConfigurationTransformer
             args:
                 -
-                    instance: Ling\Light_Kit\PageConfigurationTransformer\LightExecuteNotationResolver
+                    instance: Ling\Light_Kit\ConfigurationTransformer\LightExecuteNotationResolver
 
 
         -
@@ -294,6 +294,10 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
+- 1.18.0 -- 2021-04-09
+
+    - rename PageConfigurationTransformer to ConfigurationTransformer 
+  
 - 1.17.10 -- 2021-04-08
 
     - add LightKitPageRenderer->renderPage pageConf option, add own picasso widget handler

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Ling\Light_Kit\PageConfigurationTransformer;
+namespace Ling\Light_Kit\ConfigurationTransformer;
 
 
 /**

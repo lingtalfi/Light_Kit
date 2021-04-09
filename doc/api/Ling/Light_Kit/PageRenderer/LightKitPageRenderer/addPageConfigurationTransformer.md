@@ -7,7 +7,7 @@ LightKitPageRenderer::addPageConfigurationTransformer
 
 
 
-LightKitPageRenderer::addPageConfigurationTransformer — Adds a PageConfigurationTransformerInterface to this instance.
+LightKitPageRenderer::addPageConfigurationTransformer — Adds a ConfigurationTransformerInterface to this instance.
 
 
 
@@ -16,12 +16,12 @@ Description
 ================
 
 
-public [LightKitPageRenderer::addPageConfigurationTransformer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageRenderer/LightKitPageRenderer/addPageConfigurationTransformer.md)([Ling\Light_Kit\PageConfigurationTransformer\PageConfigurationTransformerInterface](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/PageConfigurationTransformerInterface.md) $transformer) : void
+public [LightKitPageRenderer::addPageConfigurationTransformer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageRenderer/LightKitPageRenderer/addPageConfigurationTransformer.md)([Ling\Light_Kit\ConfigurationTransformer\ConfigurationTransformerInterface](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/ConfigurationTransformer/ConfigurationTransformerInterface.md) $transformer) : void
 
 
 
 
-Adds a PageConfigurationTransformerInterface to this instance.
+Adds a ConfigurationTransformerInterface to this instance.
 
 
 

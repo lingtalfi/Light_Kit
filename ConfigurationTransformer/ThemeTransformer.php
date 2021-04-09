@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Ling\Light_Kit\PageConfigurationTransformer;
+namespace Ling\Light_Kit\ConfigurationTransformer;
 
 
 /**
@@ -9,7 +9,7 @@ namespace Ling\Light_Kit\PageConfigurationTransformer;
  *
  *
  */
-class ThemeTransformer implements PageConfigurationTransformerInterface
+class ThemeTransformer implements ConfigurationTransformerInterface
 {
 
     /**
@@ -39,15 +39,15 @@ class ThemeTransformer implements PageConfigurationTransformerInterface
 
 
     //--------------------------------------------
-    // PageConfigurationTransformerInterface
+    // ConfigurationTransformerInterface
     //--------------------------------------------
     /**
      * @implementation
      */
-    public function transform(array &$pageConfiguration)
+    public function transform(array &$conf)
     {
-        if (array_key_exists("layout", $pageConfiguration)) {
-            $pageConfiguration["layout"] = str_replace('$t', $this->theme, $pageConfiguration["layout"]);
+        if (array_key_exists("layout", $conf)) {
+            $conf["layout"] = str_replace('$t', $this->theme, $conf["layout"]);
         }
     }
 

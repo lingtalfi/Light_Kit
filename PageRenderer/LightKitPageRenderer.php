@@ -15,8 +15,8 @@ use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 use Ling\Light_Events\Service\LightEventsService;
 use Ling\Light_Kit\Exception\LightKitException;
 use Ling\Light_Kit\Helper\WidgetVariablesHelper;
-use Ling\Light_Kit\PageConfigurationTransformer\DynamicVariableAwareInterface;
-use Ling\Light_Kit\PageConfigurationTransformer\PageConfigurationTransformerInterface;
+use Ling\Light_Kit\ConfigurationTransformer\DynamicVariableAwareInterface;
+use Ling\Light_Kit\ConfigurationTransformer\ConfigurationTransformerInterface;
 use Ling\Light_Kit\PageConfigurationUpdator\PageConfUpdator;
 
 
@@ -54,7 +54,7 @@ class LightKitPageRenderer extends KitPageRenderer
 
     /**
      * This property holds the array of pageConfTransformers for this instance.
-     * @var PageConfigurationTransformerInterface[]
+     * @var ConfigurationTransformerInterface[]
      */
     protected $pageConfTransformers;
 
@@ -95,11 +95,11 @@ class LightKitPageRenderer extends KitPageRenderer
 
 
     /**
-     * Adds a PageConfigurationTransformerInterface to this instance.
+     * Adds a ConfigurationTransformerInterface to this instance.
      *
-     * @param PageConfigurationTransformerInterface $transformer
+     * @param ConfigurationTransformerInterface $transformer
      */
-    public function addPageConfigurationTransformer(PageConfigurationTransformerInterface $transformer)
+    public function addPageConfigurationTransformer(ConfigurationTransformerInterface $transformer)
     {
         $this->pageConfTransformers[] = $transformer;
     }

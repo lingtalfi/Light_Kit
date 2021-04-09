@@ -4,7 +4,7 @@
 
 The WidgetVariablesHelper class
 ================
-2019-04-25 --> 2021-04-08
+2019-04-25 --> 2021-04-09
 
 
 
@@ -56,4 +56,4 @@ See the source code of [Ling\Light_Kit\Helper\WidgetVariablesHelper](https://git
 
 SeeAlso
 ==============
-Previous class: [LightKitException](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/Exception/LightKitException.md)<br>Next class: [DynamicVariableAwareInterface](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationTransformer/DynamicVariableAwareInterface.md)<br>
+Previous class: [LightKitException](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/Exception/LightKitException.md)<br>Next class: [PageConfUpdator](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/PageConfigurationUpdator/PageConfUpdator.md)<br>

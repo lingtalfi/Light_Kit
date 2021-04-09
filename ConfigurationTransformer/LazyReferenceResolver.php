@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Ling\Light_Kit\PageConfigurationTransformer;
+namespace Ling\Light_Kit\ConfigurationTransformer;
 
 
 use Ling\Bat\BDotTool;
@@ -17,7 +17,7 @@ use Ling\Light\ServiceContainer\LightServiceContainerInterface;
  * I keep the code below just for a reference for myself, and as an example of what transformers can do, but it should probably be removed.
  *
  */
-class LazyReferenceResolver implements PageConfigurationTransformerInterface, LightServiceContainerAwareInterface
+class LazyReferenceResolver implements ConfigurationTransformerInterface, LightServiceContainerAwareInterface
 {
 
     /**
@@ -103,12 +103,12 @@ class LazyReferenceResolver implements PageConfigurationTransformerInterface, Li
 
 
     //--------------------------------------------
-    // PageConfigurationTransformerInterface
+    // ConfigurationTransformerInterface
     //--------------------------------------------
     /**
      * @implementation
      */
-    public function transform(array &$pageConfiguration)
+    public function transform(array &$conf)
     {
 
 
@@ -118,7 +118,7 @@ class LazyReferenceResolver implements PageConfigurationTransformerInterface, Li
             // example: ::(whatever)::
             $regex = '!\(::([^:]*)::\)(.*)!';
 
-            BDotTool::walk($pageConfiguration, function (&$v, $key, $dotPath) use (&$pageConfiguration, $regex) {
+            BDotTool::walk($conf, function (&$v, $key, $dotPath) use (&$conf, $regex) {
 
                 if (is_string($v)) {
                     if (0 === strpos($v, '(::')) {
@@ -130,7 +130,7 @@ class LazyReferenceResolver implements PageConfigurationTransformerInterface, Li
                             if (array_key_exists($token, $this->resolvers)) {
                                 $resolver = $this->resolvers[$token];
                                 $replace = call_user_func($resolver, $whatever, $this->container);
-                                BDotTool::setDotValue($dotPath, $replace, $pageConfiguration);
+                                BDotTool::setDotValue($dotPath, $replace, $conf);
                             }
                         }
                     }
