@@ -132,7 +132,6 @@ kit_css_file_generator:
     constructor_args:
         rootDir: ${app_dir}/www
         format: css/tmp/$identifier-compiled-widgets.css
-
 ```
 
 Note: this file is injected automatically in your light app when you import the planet.
@@ -294,6 +293,10 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
+- 1.18.1 -- 2021-04-09
+
+    - fix wrong service conf snippet in the README.md 
+  
 - 1.18.0 -- 2021-04-09
 
     - rename PageConfigurationTransformer to ConfigurationTransformer 

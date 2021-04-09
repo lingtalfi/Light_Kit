@@ -18,12 +18,12 @@ kit:
             method: addPageConfigurationTransformer
             args:
                 -
-                    instance: Ling\Light_Kit\PageConfigurationTransformer\DynamicVariableTransformer
+                    instance: Ling\Light_Kit\ConfigurationTransformer\DynamicVariableTransformer
         -
             method: addPageConfigurationTransformer
             args:
                 -
-                    instance: Ling\Light_Kit\PageConfigurationTransformer\LightExecuteNotationResolver
+                    instance: Ling\Light_Kit\ConfigurationTransformer\LightExecuteNotationResolver
 
 
         -
