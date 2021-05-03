@@ -293,6 +293,10 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
+- 1.18.3 -- 2021-05-03
+
+    - Update dependencies to Ling.Light_Events (pushed by SubscribersUtil)
+
 - 1.18.2 -- 2021-05-03
 
     - Update dependencies to Ling.Light_Events (pushed by SubscribersUtil)
