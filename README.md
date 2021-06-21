@@ -1,6 +1,6 @@
 Light_Kit
 ===========
-2019-04-25 -> 2021-04-09
+2019-04-25 -> 2021-06-21
 
 
 
@@ -64,7 +64,7 @@ So basically, you delegate the rendering logic to the kit service provided by th
 
 How does it work?
 ==========
-2019-04-25 -> 2021-04-08
+2019-04-25 -> 2021-06-21
 
 Here is the service file provided by Light_Kit.
 
@@ -121,10 +121,12 @@ kit:
             args:
                 - prototype
                 -
-                    instance: Ling\Kit_PrototypeWidget\WidgetHandler\PrototypeWidgetHandler
+                    instance: Ling\Light_Kit\WidgetHandler\LightKitPrototypeWidgetHandler
                     methods:
                         setRootDir:
                             appDir: ${app_dir}
+                        setContainer:
+                            container: @container()
 
 
 kit_css_file_generator:
@@ -293,6 +295,10 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
+- 1.18.5 -- 2021-06-21
+
+    - add LightKitPrototypeWidgetHandler class as the default prototype widget handler
+  
 - 1.18.4 -- 2021-05-31
 
     - Removing trailing plus in lpi-deps file (to work with Light_PlanetInstaller:2.0.0 api

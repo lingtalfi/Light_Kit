@@ -1,6 +1,6 @@
 Ling/Light_Kit
 ================
-2019-04-25 --> 2021-05-31
+2019-04-25 --> 2021-06-21
 
 
 
@@ -95,6 +95,14 @@ Table of contents
     - PicassoWidgetHandler::setWidgetBaseDir &ndash; Sets the widgetBaseDir.
     - PicassoWidgetHandler::process &ndash; Process the widget.
     - PicassoWidgetHandler::render &ndash; Returns the html code of the widget, according to the widget configuration.
+- [LightKitPrototypeWidgetHandler](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler.md) &ndash; The LightKitPrototypeWidgetHandler class.
+    - [LightKitPrototypeWidgetHandler::getContainer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/getContainer.md) &ndash; Returns the container of this instance.
+    - [LightKitPrototypeWidgetHandler::setContainer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/setContainer.md) &ndash; Sets the container.
+    - PrototypeWidgetHandler::__construct &ndash; Builds the PrototypeWidgetHandler instance.
+    - PrototypeWidgetHandler::setKitPageRenderer &ndash; Sets the KitPageRenderer instance.
+    - PrototypeWidgetHandler::setRootDir &ndash; Sets the rootDir.
+    - PrototypeWidgetHandler::process &ndash; Process the widget.
+    - PrototypeWidgetHandler::render &ndash; Returns the html code of the widget, according to the widget configuration.
 
 
 Dependencies

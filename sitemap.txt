@@ -91,6 +91,9 @@ https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/Widget
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPicassoWidgetHandler/getContainer.md
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPicassoWidgetHandler/setContainer.md
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPicassoWidgetHandler.md
+https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/getContainer.md
+https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/setContainer.md
+https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler.md
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit.md
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/pages/conception-notes.md
 https://github.com/lingtalfi/Light_Kit/blob/master/doc/pages/events.md
