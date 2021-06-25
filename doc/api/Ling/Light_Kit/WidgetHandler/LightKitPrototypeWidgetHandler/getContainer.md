@@ -46,7 +46,7 @@ Returns [LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob
 
 Source Code
 ===========
-See the source code for method [LightKitPrototypeWidgetHandler::getContainer](https://github.com/lingtalfi/Light_Kit/blob/master/WidgetHandler/LightKitPrototypeWidgetHandler.php#L30-L33)
+See the source code for method [LightKitPrototypeWidgetHandler::getContainer](https://github.com/lingtalfi/Light_Kit/blob/master/WidgetHandler/LightKitPrototypeWidgetHandler.php#L31-L34)
 
 
 See Also

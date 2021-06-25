@@ -10,6 +10,7 @@ Conception notes
 * [Light execute notation](#light-execute-notation)
 * [The widget variables system](#widget-variables-system)
 * [Page conf updator](#page-conf-updator)
+* [The global controller vars convention](#the-global-controller-vars-convention)
 
 
 
@@ -198,9 +199,16 @@ own use.
 
 
 
-
+The global controller vars convention
+----------
+2021-06-25
 
  
+As an alternative way to pass variables from the controller to the widget templates, we've implemented the [global controller vars convention](https://github.com/lingtalfi/TheBar/blob/master/discussions/global-controller-vars.md).
+
+We've only implemented this system for the widgets of type **prototype** so far (i.e., not picasso).
+
+
 
 
 

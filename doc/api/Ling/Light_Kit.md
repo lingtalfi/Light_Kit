@@ -115,5 +115,6 @@ Dependencies
 - [Kit_PrototypeWidget](https://github.com/lingtalfi/Kit_PrototypeWidget)
 - [Light](https://github.com/lingtalfi/Light)
 - [Light_Events](https://github.com/lingtalfi/Light_Events)
+- [Light_Vars](https://github.com/lingtalfi/Light_Vars)
 
 

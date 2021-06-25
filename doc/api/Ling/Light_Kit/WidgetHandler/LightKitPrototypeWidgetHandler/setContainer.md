@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightKitPrototypeWidgetHandler::setContainer](https://github.com/lingtalfi/Light_Kit/blob/master/WidgetHandler/LightKitPrototypeWidgetHandler.php#L40-L43)
+See the source code for method [LightKitPrototypeWidgetHandler::setContainer](https://github.com/lingtalfi/Light_Kit/blob/master/WidgetHandler/LightKitPrototypeWidgetHandler.php#L41-L44)
 
 
 See Also
@@ -57,5 +57,5 @@ See Also
 
 The [LightKitPrototypeWidgetHandler](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler.md) class.
 
-Previous method: [getContainer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/getContainer.md)<br>
+Previous method: [getContainer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/getContainer.md)<br>Next method: [getControllerVar](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/getControllerVar.md)<br>
 

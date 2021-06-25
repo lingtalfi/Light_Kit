@@ -295,6 +295,10 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
+- 1.18.7 -- 2021-06-25
+
+    - add global controller vars implementation for widgets of type prototype
+  
 - 1.18.6 -- 2021-06-25
 
     - update widget coordinates system, now accepts name as a fallback
