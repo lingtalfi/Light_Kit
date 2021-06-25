@@ -1,6 +1,6 @@
 Light_Kit
 ===========
-2019-04-25 -> 2021-06-21
+2019-04-25 -> 2021-06-25
 
 
 
@@ -294,6 +294,10 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 
 History Log
 =============
+
+- 1.18.6 -- 2021-06-25
+
+    - update widget coordinates system, now accepts name as a fallback
 
 - 1.18.5 -- 2021-06-21
 

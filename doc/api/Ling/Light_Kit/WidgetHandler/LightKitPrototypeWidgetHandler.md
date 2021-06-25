@@ -4,7 +4,7 @@
 
 The LightKitPrototypeWidgetHandler class
 ================
-2019-04-25 --> 2021-06-21
+2019-04-25 --> 2021-06-25
 
 
 
@@ -41,6 +41,7 @@ class <span class="pl-k">LightKitPrototypeWidgetHandler</span> extends [Prototyp
     - public PrototypeWidgetHandler::setRootDir(string $rootDir) : [PrototypeWidgetHandler](https://github.com/lingtalfi/Kit_PrototypeWidget/blob/master/doc/api/Ling/Kit_PrototypeWidget/WidgetHandler/PrototypeWidgetHandler.md)
     - public PrototypeWidgetHandler::process(array &$widgetConf, array $debug) : void
     - public PrototypeWidgetHandler::render(array $widgetConf, [Ling\HtmlPageTools\Copilot\HtmlPageCopilot](https://github.com/lingtalfi/HtmlPageTools/blob/master/doc/api/Ling/HtmlPageTools/Copilot/HtmlPageCopilot.md) $copilot, array $debug) : string
+    - protected PrototypeWidgetHandler::getCopilot() : [HtmlPageCopilot](https://github.com/lingtalfi/HtmlPageTools/blob/master/doc/api/Ling/HtmlPageTools/Copilot/HtmlPageCopilot.md)
     - protected PrototypeWidgetHandler::error(string $msg, array $widgetConf, array $debug) : void
 
 }
@@ -82,6 +83,7 @@ Methods
 - PrototypeWidgetHandler::setRootDir &ndash; Sets the rootDir.
 - PrototypeWidgetHandler::process &ndash; Process the widget.
 - PrototypeWidgetHandler::render &ndash; Returns the html code of the widget, according to the widget configuration.
+- PrototypeWidgetHandler::getCopilot &ndash; Returns the instance of the copilot.
 - PrototypeWidgetHandler::error &ndash; Throws an useful error message.
 
 
