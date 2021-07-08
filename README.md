@@ -1,6 +1,6 @@
 Light_Kit
 ===========
-2019-04-25 -> 2021-06-25
+2019-04-25 -> 2021-07-08
 
 
 
@@ -295,6 +295,10 @@ to access the htmlPageCopilot instance (and inject their assets on the main page
 History Log
 =============
 
+- 1.18.8 -- 2021-07-08
+
+    - add getControllerVars method available to templates/layouts
+  
 - 1.18.7 -- 2021-06-25
 
     - add global controller vars implementation for widgets of type prototype

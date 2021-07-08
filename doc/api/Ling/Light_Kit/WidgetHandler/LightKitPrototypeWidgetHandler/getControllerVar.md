@@ -54,7 +54,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [LightKitPrototypeWidgetHandler::getControllerVar](https://github.com/lingtalfi/Light_Kit/blob/master/WidgetHandler/LightKitPrototypeWidgetHandler.php#L54-L61)
+See the source code for method [LightKitPrototypeWidgetHandler::getControllerVar](https://github.com/lingtalfi/Light_Kit/blob/master/WidgetHandler/LightKitPrototypeWidgetHandler.php#L54-L57)
 
 
 See Also
@@ -62,5 +62,5 @@ See Also
 
 The [LightKitPrototypeWidgetHandler](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler.md) class.
 
-Previous method: [setContainer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/setContainer.md)<br>
+Previous method: [setContainer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/setContainer.md)<br>Next method: [getControllerVars](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/getControllerVars.md)<br>
 

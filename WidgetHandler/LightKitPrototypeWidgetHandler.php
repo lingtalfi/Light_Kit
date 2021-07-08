@@ -6,7 +6,7 @@ namespace Ling\Light_Kit\WidgetHandler;
 
 use Ling\Kit_PrototypeWidget\WidgetHandler\PrototypeWidgetHandler;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
-use Ling\Light_Vars\Service\LightVarsService;
+use Ling\Light_Kit\Helper\LightKitControllerHelper;
 
 
 /**
@@ -53,11 +53,19 @@ class LightKitPrototypeWidgetHandler extends PrototypeWidgetHandler
      */
     protected function getControllerVar(string $key, $default = null)
     {
-        /**
-         * @var $_va LightVarsService
-         */
-        $_va = $this->getContainer()->get("vars");
-        return $_va->getVar("controller.$key", $default);
+        return LightKitControllerHelper::getControllerVar($this->container, $key, $default);
+    }
+
+
+    /**
+     * Returns the values of the global variables set in the "controller" namespace.
+     *
+     * @return array
+     * @throws \Exception
+     */
+    protected function getControllerVars(): array
+    {
+        return LightKitControllerHelper::getControllerVars($this->container);
     }
 
 }

@@ -4,7 +4,7 @@
 
 The LightKitPrototypeWidgetHandler class
 ================
-2019-04-25 --> 2021-06-25
+2019-04-25 --> 2021-07-08
 
 
 
@@ -35,6 +35,7 @@ class <span class="pl-k">LightKitPrototypeWidgetHandler</span> extends [Prototyp
     - public [getContainer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/getContainer.md)() : [LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md)
     - public [setContainer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/setContainer.md)([Ling\Light\ServiceContainer\LightServiceContainerInterface](https://github.com/lingtalfi/Light/blob/master/doc/api/Ling/Light/ServiceContainer/LightServiceContainerInterface.md) $container) : void
     - protected [getControllerVar](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/getControllerVar.md)(string $key, ?$default = null) : void
+    - protected [getControllerVars](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/getControllerVars.md)() : array
 
 - Inherited methods
     - public PrototypeWidgetHandler::__construct() : void
@@ -80,6 +81,7 @@ Methods
 - [LightKitPrototypeWidgetHandler::getContainer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/getContainer.md) &ndash; Returns the container of this instance.
 - [LightKitPrototypeWidgetHandler::setContainer](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/setContainer.md) &ndash; Sets the container.
 - [LightKitPrototypeWidgetHandler::getControllerVar](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/getControllerVar.md) &ndash; Returns the value of the global variable set in the "controller" namespace, with the given key.
+- [LightKitPrototypeWidgetHandler::getControllerVars](https://github.com/lingtalfi/Light_Kit/blob/master/doc/api/Ling/Light_Kit/WidgetHandler/LightKitPrototypeWidgetHandler/getControllerVars.md) &ndash; Returns the values of the global variables set in the "controller" namespace.
 - PrototypeWidgetHandler::__construct &ndash; Builds the PrototypeWidgetHandler instance.
 - PrototypeWidgetHandler::setKitPageRenderer &ndash; Sets the KitPageRenderer instance.
 - PrototypeWidgetHandler::setRootDir &ndash; Sets the rootDir.

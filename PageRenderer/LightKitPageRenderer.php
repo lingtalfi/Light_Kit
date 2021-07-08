@@ -13,10 +13,11 @@ use Ling\Light\ServiceContainer\LightDummyServiceContainer;
 use Ling\Light\ServiceContainer\LightServiceContainerAwareInterface;
 use Ling\Light\ServiceContainer\LightServiceContainerInterface;
 use Ling\Light_Events\Service\LightEventsService;
-use Ling\Light_Kit\Exception\LightKitException;
-use Ling\Light_Kit\Helper\WidgetVariablesHelper;
-use Ling\Light_Kit\ConfigurationTransformer\DynamicVariableAwareInterface;
 use Ling\Light_Kit\ConfigurationTransformer\ConfigurationTransformerInterface;
+use Ling\Light_Kit\ConfigurationTransformer\DynamicVariableAwareInterface;
+use Ling\Light_Kit\Exception\LightKitException;
+use Ling\Light_Kit\Helper\LightKitControllerHelper;
+use Ling\Light_Kit\Helper\WidgetVariablesHelper;
 use Ling\Light_Kit\PageConfigurationUpdator\PageConfUpdator;
 
 
@@ -126,6 +127,29 @@ class LightKitPageRenderer extends KitPageRenderer
         } else {
             throw new LightKitException("configure error: the application_dir setting is missing.");
         }
+    }
+
+    /**
+     * Returns the value of the global variable set in the "controller" namespace, with the given key.
+     * If it doesn't exist, returns the given default value.
+     *
+     * @param string $key
+     * @param null $default
+     */
+    public function getControllerVar(string $key, $default = null)
+    {
+        return LightKitControllerHelper::getControllerVar($this->container, $key, $default);
+    }
+
+    /**
+     * Returns the values of the global variables set in the "controller" namespace.
+     *
+     * @return array
+     * @throws \Exception
+     */
+    public function getControllerVars(): array
+    {
+        return LightKitControllerHelper::getControllerVars($this->container);
     }
 
 
